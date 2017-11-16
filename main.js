@@ -5,7 +5,7 @@
 //use rest in function parameter
 //if input is (1, 2, 3) the function should return [2, 4, 6]
 //the function should account for n number of arguments
-const rest = input => input.map(element => element * 2);
+const rest = (input) => input.map(element => element * 2);
 
 // function rest(input) {
 //   return input.map(function(element) {
@@ -26,15 +26,16 @@ const concat = (first, last) => first.concat(last);
 /*------------------------------*/
 
 //use spread to spread an array
-//if arr is [1, 2, 3] return 6
-const spreadAdd = (a, b, c) => a + b + c;
-const arr = [1, 2, 3]
-spreadAdd(arr);
+//if input is [1, 2, 3] return 6
+const add = (a, b, c) => a + b + c;
+const spreadAdd = input => add(input);
 
-// function spreadAdd(a, b, c) {
+// function add(a, b, c) {
 //   return a + b + c;
-// }
-// spreadAdd(arr)
+// };
+// function spreadAdd(input) {
+//   add(input);
+// };
 
 /*------------------------------*/
 

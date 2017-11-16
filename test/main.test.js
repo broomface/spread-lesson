@@ -1,7 +1,6 @@
 const chai = require('chai')
 const expect = chai.expect
 const main = require('../main.js')
-const arr = [1, 2, 3]
 
 describe('rest', function() {
   it('should return the correct array', function() {
@@ -28,7 +27,7 @@ describe('concat', function() {
 
 describe('spreadAdd', function() {
   it('should return the correct result', function() {
-    expect(main.spreadAdd(arr)).to.equal(6)
+    expect(main.spreadAdd([1, 2, 3])).to.equal(6)
   })
   it('should use the spread operator', function() {
     const match = main.spreadAdd.toString().includes('...')
