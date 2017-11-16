@@ -1,6 +1,7 @@
 const chai = require('chai')
 const expect = chai.expect
 const main = require('../main.js')
+const arr = [1, 2, 3]
 
 describe('rest', function() {
   it('should return the correct array', function() {
@@ -15,17 +16,27 @@ describe('rest', function() {
   })
 })
 
-describe('spread', function() {
+describe('concat', function() {
   it('should concat two arrays', function() {
-    expect(main.spread([1, 2, 3], [4, 5, 6])).to.deep.equal([1, 2, 3, 4, 5, 6])
+    expect(main.concat([1, 2, 3], [4, 5, 6])).to.deep.equal([1, 2, 3, 4, 5, 6])
   })
   it('should use the spread operator', function() {
-    const match = main.spread.toString().includes('...')
+    const match = main.concat.toString().includes('...')
     expect(match).to.equal(true)
   })
 })
 
-describe('math spread', function() {
+describe('spreadAdd', function() {
+  it('should return the correct result', function() {
+    expect(main.spreadAdd(arr)).to.equal(6)
+  })
+  it('should use the spread operator', function() {
+    const match = main.spreadAdd.toString().includes('...')
+    expect(match).to.equal(true)
+  })
+})
+
+describe('mathSpread', function() {
   it('should return the max number in array', function() {
     expect(main.mathSpread([1, 2, 4, 7, 9])).to.equal(9)
   })
